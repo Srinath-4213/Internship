@@ -1,0 +1,28 @@
+Summary:
+Cross site scripting.
+DOMAIN: vulnweb.com
+subdomain: http://testasp.vulnweb.com/
+	
+Steps To Reproduce:
+Step 1: Visit http://testasp.vulnweb.com/
+Step 2: On the top menu you will find a search option.
+Step 3: Click on it and you will be prompted with the Search box.
+Step 4: You can intercept the request in Burp Suite
+Step 5: Now you can find different payloads for XSS. 
+Step 6: Send the request to the intruder and paste all the payloads.
+Step 7: Try to find a successful payload for XSS.
+Step 8: Prepare a report for it.
+
+To reproduce this, an attacker has to:
+Prepare a Javascript payload that it wants the victim to execute.
+<script>alert("same")</script>
+Inject this Javascript code properly into the vulnerable parameter, creating thus a crafted future GET request that will inject the payload.
+
+Host: http://testasp.vulnweb.com/
+
+
+Supporting Material/References:
+SCREENSHOTS.
+SCREEN RECORDING
+VIDEO DEMONSTRATION.
+
